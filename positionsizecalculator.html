@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/calcjs.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title></title>
+</head>
+<body>
+    <section id="content">
+      <!-- <img id="logo" src="images/cytlogo.png" atl="cyt logo" align="center"> -->
+      <h3 align="center">Position Size Calculator</h3>
+      <div id="main-content">
+      <div class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          Please enter valid inputs for the fields below.
+      </div>
+
+        <div class="form-group">
+          <label for="account-value" class="col-sm-8 control-label" >Account Value</label>
+          <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <input type="number" id="account-value" class="form-control" title="Enter the total amount of capital you have in your portfolio.">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="account-risk-ratio" class="col-sm-8 control-label">Percentage of Account Value willing to Risk</label>
+          <div class="input-group">
+            <div class="input-group-addon">%</div>
+              <input type="number" id="account-risk-ratio" class="form-control" title="Enter the percentage of your total capital you are willing to risk on this single trade.">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="entry-price" class="col-sm-8 control-label">Entry Price</label>
+          <div class="input-group">
+            <div class="input-group-addon">$</div>
+              <input type="number" id="entry-price" class="form-control" title="Enter the price that you plan to enter at.">
+           </div>
+        </div>
+
+        <div class="form-group">
+          <label for="initial-protective-stop" class="col-sm-8 control-label">Initial Protective Stop</label>
+          <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <input type="number" id="initial-protective-stop" class="form-control" title="Enter the price you plan to exit at with a loss if you are wrong.">
+          </div>
+        </div>
+
+        <div class="form-group">
+         <div class="btn btn-primary pull-right" onclick="return MYAPP.calcSummary();">Compute</div>
+        </div>
+
+        <!-- Output for this section -->
+      <div id="output">
+        <table class="table table-condensed">
+        <tr>
+          <td>Max # of Shares to Purchase</td>
+          <td id="max-risk" class="output_values"></td>
+        </tr>
+         <tr>
+          <td>Position Size</td>
+          <td id="pos-size" class="output_values"></td>
+        </tr>
+        <tr>
+          <td>$ Risked/Share</td>
+          <td id="risked-share" class="output_values"></td>
+        </tr>
+          <td>% Risked/Pos</td>
+          <td id ="risked-position-per" class="output_values"></td>
+        <tr>
+          <td>$ Risked/Pos</td>
+          <td id="risked-position-dol" class="output_values"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+    </section>
+</body>
+</html>

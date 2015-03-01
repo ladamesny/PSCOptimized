@@ -1,0 +1,70 @@
+/*body, section, header, img, p, ul, li, ol, table{
+  margin:0;
+  padding: 0;
+  border:none;
+}
+*/
+section{
+  margin: 10px; 
+}
+#content{
+  width:480px;
+  padding: 10px;
+}
+
+.control-group{
+  margin-bottom: 10px;
+}
+
+#output {
+  margin-top: 50px;
+}
+
+#main-content{
+  font-size: 12px;
+}
+
+table {
+  font-weight: bold;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.output_values {
+  text-align: right;
+  font-style: italic;
+  font-size: 14px;
+  color:blue;
+}
+
+div.btn{
+  width: 80px;
+  height:30px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.error{
+  border:2px solid #a94442;
+  background-color: #f2dede;
+}
+
+.alert{
+  display: none;
+}
+
+
+@media screen and (max-width:480px) {
+  #content{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:320px) {
+  #content{
+    width: 100%;
+  }
+}
